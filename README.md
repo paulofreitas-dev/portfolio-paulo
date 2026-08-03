@@ -2,7 +2,7 @@
 
 
 
-Site hub pessoal, Unity/C# Game Developer e criador de Stormblade.
+Site HUB pessoal.
 
 
 
