@@ -36,8 +36,8 @@ body::before {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
     background-size: 48px 48px;
     opacity: 0.18;
     z-index: -1;
@@ -99,7 +99,7 @@ img {
 .brand {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
 
     color: var(--color-text);
     font-size: 2rem;
@@ -108,8 +108,14 @@ img {
 }
 
 .brand-symbol {
-    color: var(--color-red);
-    font-size: 1.5rem;
+    height: 75px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.brand-symbol:hover{
+    box-shadow: 0 0 16px #fff;
 }
 
 .nav-links {
@@ -178,7 +184,6 @@ img {
     font-size: clamp(4rem, 7vw, 7.5rem);
     line-height: 0.9;
     text-transform: uppercase;
-    letter-spacing: -0.04em;
 
     color: var(--color-text);
     text-shadow: 
@@ -189,9 +194,9 @@ img {
 .hero-title span {
     display: block;
     margin-top: 18px;
-
+    letter-spacing: 10px;
     color: var(--color-red);
-    font-size: clamp(1.5rem, 2.8vw, 3rem);
+    font-size: 19px;
     text-shadow:
         0 0 16px rgba(197, 22, 29, 0.45),
         0 0 34px rgba(197, 22, 29, 0.2);
@@ -253,23 +258,25 @@ img {
 
 .hero-tags{
     display: flex;
-    gap: 32px;
+    gap: 48px;
     margin-top: 48px;
 
     color: var(--color-gold);
     font-size: 0.95rem;
 }
 
-.hero-tags span{
-    position: relative;
-    padding-left: 28px;
+.tag{
+    display: flex;
+    align-items: center;
 }
 
-.hero-tags span::before{
-    content: ".";
-    position: absolute;
-    left: 0;
-    color: var(--color-red);
+.tag span{
+    position: relative;
+    padding-left: 10px;
+}
+
+.tag img{
+    width: 20px;
 }
 
 .hero-visual {
