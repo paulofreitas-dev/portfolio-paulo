@@ -107,6 +107,10 @@ img {
     letter-spacing: 0.04em;
 }
 
+.brand-name{
+    font-size: 19px;
+}
+
 .brand-symbol {
     height: 75px;
     border: 2px solid #fff;
@@ -117,6 +121,7 @@ img {
 .brand-symbol:hover{
     box-shadow: 0 0 16px #fff;
 }
+
 
 .nav-links {
     display: flex;
