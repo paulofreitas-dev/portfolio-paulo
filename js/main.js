@@ -1,0 +1,1 @@
+console.log("Portfólio Paulo Freitas carregado.");
