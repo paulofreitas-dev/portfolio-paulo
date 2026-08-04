@@ -255,10 +255,16 @@ img {
     color: var(--color-gold);
     background: rgba(0, 0, 0, 0.35);
     border: 1px solid rgba(178, 138, 85, 0.7);
+    display: flex;
+    gap: 10px;
 }
 
 .btn-secondary:hover {
     box-shadow: 0 0 22px rgba(178, 138, 85, 0.2);
+}
+
+.btn-secondary img{
+    width: 20px;
 }
 
 .hero-tags{
