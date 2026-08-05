@@ -387,7 +387,7 @@ img {
         0 0 18px rgba(197, 22, 29, 0.75),
         0 0 42px rgba(197, 22, 29, 0.35);
         
-    animation: loaderPulse 0.3s infinite alternate;
+    animation: loaderPulse 0.2s infinite alternate;
 }
 
 .loader-text{
@@ -425,7 +425,7 @@ img {
     }
 
     to{
-        transform: scale(1.4);
+        transform: scale(1.7);
         opacity: 1;
     }
 }
