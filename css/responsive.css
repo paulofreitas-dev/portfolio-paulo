@@ -1,0 +1,38 @@
+@media(max-width: 900px){
+    .navbar{
+        padding: 18px 24px;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .brand{
+        font-size: 1.4rem;
+    }
+
+    .brand-symbol{
+        height: 56px;
+    }
+
+    .hero{
+        padding: 120px 24px 56px;
+    }
+
+    .hero-layout{
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hero-title{
+        font-size: clamp(3rem, 16vw, 5rem);
+    }
+
+    .hero-actions{
+        flex-direction: column;
+    }
+
+    .btn{
+        width: 100%;
+    }
+}

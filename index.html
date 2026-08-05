@@ -9,6 +9,7 @@
         content="Portfólio de Paulo Freitas, desenvolvedor Unity/C# focado em gameplay 2D, arquitetura modular e criador de Stormblade.">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -16,14 +17,18 @@
     <header class="site-header">
         <nav class="navbar">
             <a href="#hero" class="brand">
-                <img src="assets/perfil/avatar-portrait.png" alt="Avatar de Paulo Freitas em estilo cyberpunk" class="brand-symbol">
+                <img src="assets/perfil/avatar-portrait.png" alt="Avatar de Paulo Freitas em estilo cyberpunk"
+                    class="brand-symbol">
                 <span class="brand-name">Paulo Freitas</span>
             </a>
 
             <ul class="nav-links">
-                <li><a href="#stormblade">Stormblade</a></li>
-                <li><a href="#sistemas">Sistemas</a></li>
-                <li><a href="#devlogs">Devlogs</a></li>
+                <li><a href="stormblade.html" class="page-transition" data-loading-text="Carregando Stormblade...">Stormblade</a></li>
+                <li><a href="sistemas.html" class="page-transition" data-loading-text="Inicializando sistemas...">Sistemas</a></li>
+                <li><a href="assets/curriculo/paulo-freitas-curriculo-unity-csharp-game-developer.pdf">Currículo
+
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -43,7 +48,7 @@
                         combate legível, arquitetura modular e boa sensação de controle.</p>
 
                     <div class="hero-actions">
-                        <a href="#stormblade" class="btn btn-primary">Ver Stormblade</a>
+                        <a href="stormblade.html" class="btn btn-primary page-transition" data-loading-text="Carregando Stormblade...">Ver Stormblade</a>
 
                         <a href="assets/curriculo/paulo-freitas-curriculo-unity-csharp-game-developer.pdf"
                             class="btn btn-secondary" target="_blank">
@@ -74,27 +79,21 @@
             </div>
 
         </section>
-
-        <section id="sobre" class="section">
-            <h2>Sobre mim</h2>
-        </section>
-
-        <section id="stormblade" class="section">
-            <h2>Stormblade</h2>
-        </section>
-
-        <section id="sistemas" class="section">
-            <h2>Sistemas técnicos</h2>
-        </section>
-
-        <section id="devlogs" class="section">
-            <h2>Devlogs técnicos</h2>
-        </section>
     </main>
 
     <footer class="site-footer">
         <p>Transformo sistemas em experiências memoráveis.</p>
     </footer>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-symbol">🔸</div>
+            <p class="loader-text">Now Loading...</p>
+            <div class="loader-bar">
+                <span></span>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

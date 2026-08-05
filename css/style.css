@@ -39,7 +39,7 @@ body::before {
     background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
     background-size: 48px 48px;
-    opacity: 0.18;
+    opacity: 0.6;
     z-index: -1;
 }
 
@@ -52,7 +52,6 @@ img {
     max-width: 100%;
     display: block;
 }
-
 
 .section {
     max-width: var(--max-width);
@@ -112,7 +111,7 @@ img {
 }
 
 .brand-symbol {
-    height: 75px;
+    height: 60px;
     border: 2px solid #fff;
     border-radius: 50px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -142,7 +141,7 @@ img {
 }
 
 .hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 110px);
     padding: 130px 80px 72px;
 
     display: flex;
@@ -339,4 +338,100 @@ img {
         0 100%,
         0 10%
     );
+}
+
+.site-footer{
+    padding: 18px 24px;
+    text-align: center;
+    color: var(--color-muted);
+    font-size: 0.9 rem;
+    border-top: 1px solid rgba(197, 22, 29, 0.25);
+    background: rgba(5, 5, 5, 0.85);
+}
+
+.page-loader{
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: radial-gradient(circle at center, rgba(197, 22, 29, 0.18), transparent 35%), rgba(5, 5, 5, 0.96);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.page-loader.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.loader-content{
+    text-align: center;
+    color: var(--color-text);
+}
+
+.loader-symbol{
+    color: var(--color-red);
+    font-size: 3rem;
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 18px rgba(197, 22, 29, 0.75),
+        0 0 42px rgba(197, 22, 29, 0.35);
+        
+    animation: loaderPulse 0.3s infinite alternate;
+}
+
+.loader-text{
+    color: var(--color-gold);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.loader-bar{
+    width: 260px;
+    height: 3px;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(197, 22, 29, 0.35);
+}
+
+.loader-bar span{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(90deg, transparent, var(--color-red), var(--color-gold));
+    transform: translateX(-100%);
+
+    animation: loaderBar 0.75s ease forwards;
+}
+
+@keyframes loaderPulse{
+    from{
+        transform: scale(1);
+        opacity: 0.65;
+    }
+
+    to{
+        transform: scale(1.4);
+        opacity: 1;
+    }
+}
+
+@keyframes loaderBar{
+    to{
+        transform: translateX(0);
+    }
 }
