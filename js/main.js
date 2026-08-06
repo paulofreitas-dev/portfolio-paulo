@@ -32,6 +32,6 @@ transitionLinks.forEach((link) => {
 
         setTimeout(() => {
             window.location.href = targetUrl;
-        }, 1300);
+        }, 1000);
     });
 });
