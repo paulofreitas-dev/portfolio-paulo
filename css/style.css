@@ -376,12 +376,15 @@ img {
 .loader-content{
     text-align: center;
     color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .loader-symbol{
     color: var(--color-red);
-    font-size: 3rem;
-    margin-bottom: 18px;
+    width: 30px;
+    margin-bottom: 40px;
 
     text-shadow:
         0 0 18px rgba(197, 22, 29, 0.75),
@@ -425,7 +428,7 @@ img {
     }
 
     to{
-        transform: scale(1.4);
+        transform: scale(1.7);
         opacity: 1;
     }
 }
