@@ -346,7 +346,7 @@ img {
     padding: 18px 24px;
     text-align: center;
     color: var(--color-muted);
-    font-size: 0.9 rem;
+    font-size: 0.9rem;
     border-top: 1px solid rgba(197, 22, 29, 0.25);
     background: rgba(5, 5, 5, 0.85);
 }
@@ -450,7 +450,7 @@ img {
     display: grid;
     grid-template-columns: minmax(0, 1fr) var(--hero-frame-size);
     align-items: center;
-    gap: 200px;
+    gap: clamp(72px, 10vw, 200px);
 
     max-width: var(--max-width);
     margin: 0 auto;
@@ -571,17 +571,61 @@ img {
 }
 
 .technical-cta{
-    text-align: center;
+    text-align: left;
+}
+
+.technical-cta .section-kicker::after{
+    content: "";
+    display: inline-block;
+    width: 160px;
+    height: 1px;
+    margin-left: 20px;
+    vertical-align: middle;
+    background: linear-gradient(90deg, var(--color-gold), var(--color-red));
+}
+
+.technical-cta-layout{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 620px);
+    align-items: center;
+    gap: 72px;
 }
 
 .technical-cta-content{
-    max-width: 760px;
-    margin: 0 auto;
+    max-width: 640px;
+    margin: 0;
 }
 
-.technical-cta p{
+.technical-cta-description{
     color: var(--color-muted);
     margin: 24px 0 32px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.technical-cta-content .btn{
+    width: fit-content;
+    min-width: 280px;
+}
+
+.technical-cta-visual{
+    justify-self: end;
+    width: min(100%, 620px);
+}
+
+.technical-cta-frame{
+    width: 100%;
+    padding: 18px;
+    overflow: hidden;
+}
+
+.technical-cta-frame img{
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center top;
+
+    clip-path: polygon(5% 0, 100% 0, 100% 88%, 94% 100%, 0 100%, 0 10%);
 }
 
 /* Stormblade Section Pager */
@@ -646,14 +690,15 @@ img {
     justify-content: center;
 }
 
-.status-grid-fold{
-    margin-top: 56px;
+.page-section-inner.technical-cta-layout{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 620px);
+    align-items: center;
+    gap: 72px;
 }
 
-.page-signature{
-    margin-top: 48px;
-    color: var(--color-muted);
-    font-size: 0.9rem;
+.status-grid-fold{
+    margin-top: 56px;
 }
 
 /* DOBRA 2: GAMEPLAY PREVIEW / MP4 */
@@ -694,7 +739,7 @@ img {
     max-width: 760px;
     margin-top: 24px;
     color: var(--color-muted);
-    font-size: 1.05rem;
+    font-size: 0.84rem;
 }
 
 .gameplay-screenshot-grid{

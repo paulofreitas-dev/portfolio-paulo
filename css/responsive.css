@@ -90,4 +90,27 @@
     .section-indicator{
         display: none;
     }
+
+    .technical-cta-layout{
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .technical-cta-content{
+        max-width: none;
+    }
+
+    .technical-cta-content .btn{
+        width: 100%;
+    }
+
+    .technical-cta-visual{
+        width: 100%;
+        justify-self: stretch;
+    }
+
+    .page-section-inner.technical-cta-layout{
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
 }
