@@ -35,4 +35,59 @@
     .btn{
         width: 100%;
     }
+
+    /* Stormblade Page */
+
+    .project-hero{
+        grid-template-columns: 1fr;
+        padding: 120px 24px 64px;
+        gap: 48px;
+    }
+
+    .project-text-grid,
+    .status-grid,
+    .feature-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .project-title{
+        font-size: clamp(3rem, 16vw, 5rem);
+    }
+
+    .stormblade-page{
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .stormblade-page .site-footer{
+        display: block;
+    }
+
+    .section-pager{
+        height: auto;
+        overflow: visible;
+    }
+
+    .page-section{
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+        min-height: auto;
+    }
+
+    .page-section-inner{
+        min-height: auto;
+        padding: 120px 24px 64px;
+    }
+
+    .gameplay-screenshot-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .section-indicator{
+        display: none;
+    }
 }

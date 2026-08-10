@@ -8,6 +8,8 @@
     --color-gold: #b28a55;
     --color-border: rgba(197, 22, 29, 0.45);
     --max-width: 1440px;
+
+    --hero-frame-size: clamp(560px, 38vw, 680px);
 }
 
 * {
@@ -98,7 +100,7 @@ img {
 .brand {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 18px;
 
     color: var(--color-text);
     font-size: 2rem;
@@ -437,4 +439,343 @@ img {
     to{
         transform: translateX(0);
     }
+}
+
+/* Stormblade Page */
+
+.project-hero{
+    min-height: calc(100vh - 110px);
+    padding: 130px 10px 72px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--hero-frame-size);
+    align-items: center;
+    gap: 200px;
+
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.project-hero-visual{
+    position: relative;
+    justify-self: end;
+    width: var(--hero-frame-size);
+}
+
+.project-title{
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+.project-title span{
+    display: block;
+    margin-top: 18px;
+    color: var(--color-red);
+    font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+    letter-spacing: 0.12rem;
+}
+
+.project-description{
+    max-width: 620px;
+    margin-top: 36px;
+    color: var(--color-muted);
+    font-size: 1.2rem;
+}
+
+.stormblade-frame{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 18px;
+    overflow: hidden;
+}
+
+.stormblade-frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+
+    clip-path: polygon(5% 0, 100% 0, 100% 88%, 94% 100%, 0 100%, 0 10%);
+}
+
+.section-heading{
+    margin-bottom: 36px;
+}
+
+.section-kicker{
+    color: var(--color-red);
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-heading h2,
+.technical-cta h2{
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1;
+    color: var(--color-text);
+}
+
+.project-text-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+
+    color: var(--color-muted);
+    font-size: 1.1rem;
+}
+
+.status-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.status-card,
+.feature-card{
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(197, 22, 29, 0.25);
+}
+
+.status-card span{
+    display: block;
+    color: var(--color-gold);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+}
+
+.status-card strong{
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+.feature-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-card h3{
+    color: var(--color-red);
+    margin-bottom: 12px;
+}
+
+.feature-card p{
+    color: var(--color-muted);
+}
+
+.technical-cta{
+    text-align: center;
+}
+
+.technical-cta-content{
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.technical-cta p{
+    color: var(--color-muted);
+    margin: 24px 0 32px;
+}
+
+/* Stormblade Section Pager */
+
+.stormblade-page{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.stormblade-page .site-footer{
+    display: none;
+}
+
+.section-pager{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page-section{
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(48px) scale(0.985);
+
+    transition: opacity 0.55s ease,
+                transform 0.55s ease,
+                visibility 0.55s ease;
+}
+
+.page-section.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0) scale(1);
+    z-index: 2;
+}
+
+.page-section .project-hero{
+    width: 100%;
+}
+
+.content-fold{
+    min-height: 100vh;
+}
+
+.page-section-inner{
+    width: 100%;
+    max-width: var(--max-width);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 130px 80px 72px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.status-grid-fold{
+    margin-top: 56px;
+}
+
+.page-signature{
+    margin-top: 48px;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+/* DOBRA 2: GAMEPLAY PREVIEW / MP4 */
+
+.gameplay-preview-fold{
+    align-items: center;
+    text-align: center;
+}
+
+.gameplay-preview-fold .section-heading{
+    max-width: 900px;
+}
+
+.video-showcase{
+    width: min(100%, 980px);
+    padding: 18px;
+
+    border: 1px solid var(--color-border);
+    background: linear-gradient(135deg, rgba(197, 22, 29, 0.18), transparent 30%), rgba(0, 0, 0 , 0.35);
+
+    clip-path: polygon(4% 0, 100% 0, 100% 88%, 96% 100%, 0 100%, 0 12%);
+
+    box-shadow: 0 0 42px rgba(197, 22, 29, 0.25),
+                inset 0 0 38px rgba(197, 22, 29, 0.12);
+}
+
+.video-showcase video{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+
+    border: 1px solid rgba(197, 22, 29, 0.5);
+
+    clip-path: polygon(3% 0, 100% 0, 100% 90%, 96% 100%, 0 100%, 0 10%);
+}
+
+.preview-description{
+    max-width: 760px;
+    margin-top: 24px;
+    color: var(--color-muted);
+    font-size: 1.05rem;
+}
+
+.gameplay-screenshot-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.gameplay-card{
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(197, 22, 29, 0.25);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.gameplay-card:hover{
+    transform: translateY(-4px);
+    border-color: rgba(197, 22, 29, 0.7);
+    box-shadow: 0 0 28px rgba(197, 22, 29, 0.18);
+}
+
+.gameplay-card img{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(197, 22, 29, 0.25);
+}
+
+.gameplay-card-content{
+    padding: 22px;
+}
+
+.gameplay-card-content h3{
+    color: var(--color-red);
+    margin-bottom: 10px;
+}
+
+.gameplay-card-content p{
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+.section-indicator{
+    position: fixed;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.section-dot{
+    width: 10px;
+    height: 10px;
+
+    border: 1px solid var(--color-gold);
+    border-radius: 50%;
+    background: transparent;
+
+    cursor: pointer;
+    opacity: 0.55;
+
+    transition:
+        opacity 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.section-dot:hover,
+.section-dot.active{
+    opacity: 1;
+    background: var(--color-red);
+    border-color: var(--color-red);
+    box-shadow: 0 0 14px rgba(197, 22, 29, 0.65);
+    transform: scale(1.25);
 }
