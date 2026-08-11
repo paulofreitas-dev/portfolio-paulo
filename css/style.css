@@ -90,7 +90,7 @@ img {
 .navbar {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 24px 80px;
+    padding: 12px 80px;
 
     display: flex;
     align-items: center;
@@ -113,14 +113,12 @@ img {
 }
 
 .brand-symbol {
-    height: 60px;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 62px;
+    transition: transform 0.4s ease, filter 0.5s ease;
 }
 
 .brand-symbol:hover{
-    box-shadow: 0 0 16px #fff;
+    filter: drop-shadow(0.6px 0.6px 2px #fff);
 }
 
 
