@@ -109,18 +109,13 @@ img {
 }
 
 .brand-name{
-    font-size: 19px;
+    font-size: 17px;
 }
 
 .brand-symbol {
     height: 62px;
     transition: transform 0.4s ease, filter 0.2s ease;
 }
-
-.brand-symbol:hover{
-    
-}
-
 
 .nav-links {
     display: flex;
@@ -130,10 +125,11 @@ img {
 
 .nav-links a {
     color: var(--color-gold);
-    font-size: 1rem;
+    font-size: 0.74rem;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.24em;
     transition: color 0.2s ease;
+    text-transform: uppercase;
 }
 
 .nav-links a:hover {
@@ -592,6 +588,12 @@ img {
 .technical-cta-content{
     max-width: 640px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .technical-cta-description{
@@ -822,3 +824,4 @@ img {
     box-shadow: 0 0 14px rgba(197, 22, 29, 0.65);
     transform: scale(1.25);
 }
+
