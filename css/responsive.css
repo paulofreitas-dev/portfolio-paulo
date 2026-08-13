@@ -1,47 +1,73 @@
 @media(max-width: 900px){
+    .site-header{
+        width: 100vw;
+        overflow: hidden;
+    }
+
     .navbar{
+        width: 100%;
+        max-width: 100%;
         padding: 16px 24px 14px;
+
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 14px;
     }
 
-    .nav-links{
-        width: 100%;
-        justify-content: center;
-        gap: 22px;
-    }
-
-    .nav-links a{
-        font-size: 0.71rem;
-        letter-spacing: 0.08em;
-        
-    }
-
     .brand{
-        font-size: 1.4rem;
+        gap: 12px;
+        justify-content: center;
     }
 
     .brand-symbol{
         height: 52px;
+        flex-shrink: 0;
     }
 
     .brand-name{
         font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    .nav-links{
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        gap: clamp(14px, 5vw, 22px);
+
+        padding-top: 10px;
+        border-top: 1px solid rgba(197, 22, 29, 0.6);
+        overflow: hidden;
+    }
+
+    .nav-links a{
+        font-size: 0.68rem;
+        letter-spacing: 0.07em;
+        white-space: nowrap;
     }
 
     .hero{
-        padding: 120px 24px 56px;
+        padding: 155px 24px 56px;
     }
 
     .hero-layout{
         grid-template-columns: 1fr;
         gap: 48px;
+        text-align: center;
     }
 
     .hero-title{
         font-size: clamp(3rem, 16vw, 5rem);
+    }
+
+    .hero-title span{
+        font-size: 15.5px;
+        letter-spacing: 0.34em;
+    }
+
+    .hero-tags{
+        justify-content: center;
     }
 
     .hero-actions{
@@ -52,31 +78,24 @@
         width: 100%;
     }
 
-    /* Stormblade Page */
-
-    .project-hero{
-        grid-template-columns: 1fr;
-        padding: 120px 24px 64px;
-        gap: 48px;
+    .avatar-frame img{
+        width: 350px;
+        height: 350px;
     }
 
-    .project-text-grid,
-    .status-grid,
-    .feature-grid{
-        grid-template-columns: 1fr;
+    .hero-kicker::after{
+        margin: 0;
     }
 
-    .project-title{
-        font-size: clamp(3rem, 16vw, 5rem);
-    }
-
-    .stormblade-page{
+    .stormblade-page,
+    .pager-page{
         height: auto;
         overflow-x: hidden;
         overflow-y: auto;
     }
 
-    .stormblade-page .site-footer{
+    .stormblade-page .site-footer,
+    .pager-page .site-footer{
         display: block;
     }
 
@@ -99,15 +118,69 @@
         padding: 120px 24px 64px;
     }
 
+    .project-hero{
+        grid-template-columns: 1fr;
+        padding: 155px 24px 64px;
+        gap: 40px;
+        text-align: center;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .project-hero-content{
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-title{
+        max-width: 100%;
+        font-size: clamp(2.7rem, 14vw, 3.9rem);
+        overflow-wrap: break-word;
+    }
+
+    .project-title span{
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        line-height: 1.4;
+    }
+
+    .project-description{
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+    }
+
+    .project-text-grid,
+    .status-grid,
+    .feature-grid,
     .gameplay-screenshot-grid{
         grid-template-columns: 1fr;
+    }
+
+    .project-hero-visual{
+        justify-self: center;
+        width: min(100%, 350px);
+    }
+
+    .stormblade-frame,
+    .systems-frame{
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .stormblade-frame img,
+    .systems-frame img{
+        width: 100%;
+        height: 100%;
     }
 
     .section-indicator{
         display: none;
     }
 
-    .technical-cta-layout{
+    .page-section-inner.technical-cta-layout{
         grid-template-columns: 1fr;
         gap: 32px;
     }
@@ -123,10 +196,5 @@
     .technical-cta-visual{
         width: 100%;
         justify-self: stretch;
-    }
-
-    .page-section-inner.technical-cta-layout{
-        grid-template-columns: 1fr;
-        gap: 32px;
     }
 }

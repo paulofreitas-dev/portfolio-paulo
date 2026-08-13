@@ -176,6 +176,7 @@ img {
     height: 1px;
     margin-left: 24px;
     vertical-align: middle;
+
     background: linear-gradient(90deg, var(--color-gold), var(--color-red));
 }
 
@@ -318,6 +319,7 @@ img {
     border: 1px solid rgba(197, 22, 29, 0.8);
     clip-path: inherit;
     pointer-events: none;
+    text-align: center;
 }
 
 .avatar-frame img{
